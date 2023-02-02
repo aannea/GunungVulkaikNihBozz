@@ -1,4 +1,4 @@
-# Gunung Merapi API - Tugas Besar HEHE Team
+# Gunung Merapi - Tugas Besar HEHE Team
 
 Study case:
 1. HOF
