@@ -67,12 +67,24 @@ for i in range(10):
 
 # print(detailGunung)
 
-@App.route('/')
+def get_volcano_data(volcano_list,name):
+    return [v for v in volcano_list if v['nama'] == name]
+
+@App.route('/', methods = ['POST', 'GET'])
 def home():
     return render_template('index.html', volcano = dataGunung)
 
-def get_volcano_data(volcano_list,name):
-    return [v for v in volcano_list if v['nama'] == name]
+
+@App.route('/search', methods = ['POST', 'GET'])
+def caridata():
+    nama = request.args.get('nama-input')
+    q = get_volcano_data(detailGunung, nama)
+    # q = set(detailGunung)
+    print(q)
+    # p = list(map(lambda x: x, sorted(q)))
+    return render_template('search.html', x = q, judul='cari data')
+
+
 
 @App.route('/detail-gunung')
 def detail_gunung():
