@@ -49,8 +49,6 @@ for i in range(10):
     gunung['geolokasi.longitude'] = location.longitude
     dataGunung.append(gunung)
 
-# print(dataGunung)
-
 # Detail data gunung pada masing-masing gunung (linked)
 detailGunung = []
 # gmaps = googlemaps.Client(key='AIzaSyDTRNCCEFPzk2u9nz-ZJiml1s7zDw-jQms')
